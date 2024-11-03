@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+          border: 1px solid black;
+          width: 200px;
+         height: 200px;
+         overflow: scroll;
+}
+    </style>
+</head>
+<body onload="refresh()">
+    <form onsubmit=login()>
+        Name<br><input type="text" name="name" onchange=change()><br>
+        Email<br><input type="email" name="email" onkeydown=down()><br>
+        <p id="p1"></p>
+        password<br><input type="password" name="pass1" onkeypress=press() ><br>
+        city<br><input type="text" name="city1" onkeyup=up() id="t1" ><br>  
+        id<br><input type="Number" name="ide" id="d2" onfocus=color() onblur=dim()><br>
+        p.no<br><input type="text" name="pno"><br>
+        <button type="submit">submit</button>
+        </form>
+        <br>
+        <br>
+        <br>
+        <div onscroll="scrolling()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptatem molestiae delectus earum illum animi quis illo voluptatibus recusandae ut similique totam inventore, ipsum praesentium veniam. Molestiae hic qui ipsum.
+        Corporis natus eum eaque fuga officiis labore consequatur placeat est, accusantium at rem ea quia aliquam. Nisi ipsam totam architecto maxime soluta doloribus, eaque, sed atque expedita, dolorem reiciendis iste!</div>
+        <p id="d3"></p>
+        <script>
+            function change(){
+                alert("say hello")
+            }
+            function down(){
+                document.getElementById("p1").innerHTML="pressing the key"
+            }
+            function up(){
+                let a=document.getElementById("t1")
+                a.value=a.value.toUpperCase()
+                 
+            }
+            function press(){
+                alert("pressing a key")
+            }
+            function color(){
+                document.getElementById("d2").style.backgroundColor="violet";
+            }
+            function dim(){
+                document.getElementById("d2").style.backgroundColor="blue";
+            }
+            function login(){
+                alert("the form is submitted")
+            }
+            function refresh(){
+                alert("page is loaded")
+            }
+            function scrolling(){
+                let x=document.getElementById("d3")
+                x.innerHTML="you scrolled"
+
+            }
+        </script>
+</body>
+</html>
